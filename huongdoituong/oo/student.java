@@ -1,16 +1,14 @@
 package huongdoituong.oo;
 
-import java.sql.Date;
-
 public class student {
     String name;
-    String age;
+    int age;
     String mssv;
     String lop;
 
-    public void Student(String name, String age, String mssv, String lop) {
+    public void Student(String name, int age, String mssv, String lop) {
         this.name = name;
-        this.age = age;
+        age = age;
         this.mssv = mssv;
         this.lop = lop;
     }

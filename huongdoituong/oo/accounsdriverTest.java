@@ -1,4 +1,4 @@
-package oo;
+package huongdoituong.oo;
 
 public class accounsdriverTest {
     public static void main(String[] args) {
@@ -8,7 +8,6 @@ public class accounsdriverTest {
         account.show();
         account.withdraw(5000);
         account.show();
-
 
     }
 }
