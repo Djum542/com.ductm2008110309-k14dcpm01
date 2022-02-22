@@ -1,4 +1,4 @@
-package miniGame;
+package k14dcpm01.miniGame;
 
 public class Guessegame {
     // Guessegame có 3 thực thể dành cho 3 ddaaus thủ
@@ -38,16 +38,15 @@ public class Guessegame {
             // Kiểm tra xem dự đoán của 3 đấu thủ có đúng không, nếu đúng thì đổi về True
 
             if (guesseP1 = targetNumber) {
-                boolean bool1 = Boolean.valueOf(P1isRight);
                 P1isRight = true;
             }
             if (guesseP2 = targetNumber) {
-                boolean bool2 = Boolean.valueOf(P2isRight);
+                
                 P2isRight = true;
 
             }
             if (guesseP3 = targetNumber) {
-                boolean bool3 = Boolean.valueOf(P3isRight);
+                
                 P3isRight = true;
             }
             // Nếu có ít nhất 1 người đúng

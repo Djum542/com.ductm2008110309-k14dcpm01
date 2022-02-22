@@ -6,7 +6,7 @@ public class studentsdriverTest {
         student thachStudent = new student();
         student trungStudent = new student();
 
-        taiStudent.student("Thành Tài", 19, "014", "K14DCPM02");
+        taiStudent.student("Tai", "19", "2587", "K14DCPM01");
         taiStudent.in();
         taiStudent.hoatDongNgoaiKhoa();
 
