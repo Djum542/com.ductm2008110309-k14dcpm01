@@ -4,19 +4,19 @@ public class Hinhchunhat {
     private float chieuDai;
     private float chieuRong;
 
-    public float setchieuDai() {
+    public float setChieuDai(float chieuDai) {
         this.chieuDai = chieuDai;
     }
 
-    public float getchieuDai() {
+    public float getChieuDai() {
         return chieuDai;
     }
 
-    public float chieuRong() {
+    public float setChieuRong(float chieuRong) {
         this.chieuRong = chieuRong;
     }
 
-    public float cjieuRong() {
+    public float getChieuRong() {
         return chieuRong;
     }
 
