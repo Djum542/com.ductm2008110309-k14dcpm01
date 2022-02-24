@@ -2,9 +2,9 @@ package k14dcpm01.miniGame;
 
 public class Guessegame {
     // Guessegame có 3 thực thể dành cho 3 ddaaus thủ
-    Player P1;
-    Player P2;
-    Player P3;
+    private Player P1;
+    private Player P2;
+    private Player P3;
 
     public void Startgame() {
         // Tạo 3 đối tượng gắn cho thực thể
@@ -16,9 +16,9 @@ public class Guessegame {
         int guesseP2 = 0;
         int guesseP3 = 0;
         // Khai báo 3 biến để lưu giá trị đúng sai tùy theo đối thủ
-        boolean P1isRight = false;
-        boolean P2isRight = false;
-        boolean P3isRight = false;
+        private boolean P1isRight = false;
+        private boolean P2isRight = false;
+        private boolean P3isRight = false;
         // Sinh một số đẻ 3 đấu thủ đoán
         int targetNumber = (int) (Math.random() * 10);
         System.out.println("I'm thinking of a number between 0 and 9 ... ");
@@ -41,12 +41,12 @@ public class Guessegame {
                 P1isRight = true;
             }
             if (guesseP2 = targetNumber) {
-                
+
                 P2isRight = true;
 
             }
             if (guesseP3 = targetNumber) {
-                
+
                 P3isRight = true;
             }
             // Nếu có ít nhất 1 người đúng
