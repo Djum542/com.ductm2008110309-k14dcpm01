@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package baitapimplememtionvaextends;
 
 public class AccountTestDriver {
     public static void main(String[] args) {
@@ -9,5 +9,9 @@ public class AccountTestDriver {
         System.out.println("Số tài khoản" + getSTK);
         System.out.println("Tên tài khoản" + getTenTK);
         System.out.println("Số tiền còn trong tài khoản" + getSoTientrongTK);
+        account.napTien();
+        account.rutTien();
+        account.daoHan();
+
     }
 }
