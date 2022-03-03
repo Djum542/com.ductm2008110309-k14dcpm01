@@ -8,7 +8,10 @@ public class HangThucPham {
     private Date HSD;
 
     public void setId(String id) {
-        this.id = id;
+
+        if (id != null) {
+            this.id = id;
+        }
     }
 
     public String getId() {
@@ -16,7 +19,10 @@ public class HangThucPham {
     }
 
     public void setTenSP(String tenSP) {
-        this.tenSP = tenSP;
+        if (tenSP != null) {
+            this.tenSP = tenSP;
+        }
+
     }
 
     public String getTenSP() {
@@ -24,7 +30,10 @@ public class HangThucPham {
     }
 
     public void setDonGia(float donGia) {
-        this.donGia = donGia;
+        if (donGia > 0) {
+            this.donGia = donGia;
+        }
+
     }
 
     public float getDonGia() {
@@ -32,7 +41,10 @@ public class HangThucPham {
     }
 
     public void setNSX(Date nSX) {
-        NSX = nSX;
+        if (NSX != null) {
+            NSX = nSX;
+        }
+
     }
 
     public Date getNSX() {
@@ -40,11 +52,20 @@ public class HangThucPham {
     }
 
     public void setHSD(Date hSD) {
-        HSD = hSD;
+        if (HSD != null) {
+            HSD = hSD;
+        }
+
     }
 
     public Date getHSD() {
         return HSD;
+    }
+
+    public String toString() {
+        String string = "Mã" + this.id + "Tên sản phẩm" + this.tenSP + "Đơn giá" + this.donGia + "ngày sản xuất" + NSX
+                + "Hạn sử dụng" + HSD;
+        return string;
     }
 
 }
