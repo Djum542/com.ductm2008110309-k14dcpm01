@@ -1,4 +1,5 @@
-public class chuyenxenoithanh extends Chuyenxe {
+package baitapimplementionvaexextends;
+public class Chuyenxenoithanh extends Chuyenxe {
     @Override
     protected void maChuyenxe() {
         System.out.println("Mã chuyến xe là:");

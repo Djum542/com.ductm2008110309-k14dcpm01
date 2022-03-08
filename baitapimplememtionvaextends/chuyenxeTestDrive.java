@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
-public class chuyenxeTestDrive {
+public class ChuyenxeTestDrive {
     public static void main(String[] args) {
-        System.out.println("Thông tin chuyến xe" + chuyenxenoithanh);
-        System.out.println("Thông tin chuyến xe" + chuyenxengoaithanh);
+        Chuyenxe chuyenxe = new Chuyenxe();
+
+        System.out.println("Thông tin chuyến xe" + getchuyenxengoaithanh);
+        System.out.println("Thông tin chuyến xe" + getchuyenxenoithanh);
 
     }
 }

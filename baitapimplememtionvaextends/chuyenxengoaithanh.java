@@ -1,4 +1,4 @@
-public class chuyenxengoaithanh extends Chuyenxe {
+public class Chuyenxengoaithanh extends Chuyenxe {
 
     @Override
     protected void maChuyenxe() {
