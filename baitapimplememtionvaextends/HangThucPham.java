@@ -7,10 +7,13 @@ public class HangThucPham {
     private Date NSX;
     private Date HSD;
 
-    public void setId(String id) {
+    private void setId(String id) {
 
         if (id != null) {
             this.id = id;
+        } else {
+            System.out.println(" Không được để chống");
+            this.id = "tp";
         }
     }
 
@@ -21,6 +24,10 @@ public class HangThucPham {
     public void setTenSP(String tenSP) {
         if (tenSP != null) {
             this.tenSP = tenSP;
+        } else {
+            System.out.println("Tên hàng không được rỗng");
+            this.tenSP = "xxxxxxx";
+
         }
 
     }
@@ -32,6 +39,9 @@ public class HangThucPham {
     public void setDonGia(float donGia) {
         if (donGia > 0) {
             this.donGia = donGia;
+        } else {
+            System.out.println("Đơn giá");
+            this.donGia = "            ";
         }
 
     }
@@ -42,7 +52,10 @@ public class HangThucPham {
 
     public void setNSX(Date nSX) {
         if (NSX != null) {
-            NSX = nSX;
+            this.NSX = NSX;
+        } else {
+            System.out.println("Ngày sản xuất không để trống");
+            this.NSX = new Date();// ngày sản xuất
         }
 
     }
@@ -52,8 +65,11 @@ public class HangThucPham {
     }
 
     public void setHSD(Date hSD) {
-        if (HSD != null) {
-            HSD = hSD;
+        if (HSD != null && HSD after (NSX)) {
+            this.HSD = HSD;
+        }else{
+            System.out.println("Hạn sử dung không được để trống");
+            this.HSD = "sau ngày sản xuất là 10 ngày";
         }
 
     }
