@@ -20,6 +20,8 @@ public class Account {
 
     public void setSoTientrongTK(double soTientrongTK) {
         this.soTientrongTK = soTientrongTK;
+        DecimalFormat donvitien = new DecimalFormat();
+
     }
 
     public double getSoTientrongTK() {
@@ -31,9 +33,8 @@ public class Account {
     }
 
     public String getTenTK() {
+
         return tenTK;
-        DecimalFormat donvitien = new DecimalFormat();
-        System.out.println(Formatter.format() + "vnđ");
     }
 
     // Hằng số lãi xuất
@@ -43,16 +44,16 @@ public class Account {
     }
 
     public float getHangsolai() {
+
         return hangsolai;
-        hangsolai = soTientrongTK * 0.035;
     }
 
     public boolean Account() {
         if (true) {
             this.STK = STK;
             this.tenTK = tenTK;
-            this.soTientrongTK = soTientrongTK;
-            soTientrongTK = 50;
+            this.soTientrongTK = "50";
+
         } else {
             Account account = new Account();
         }
@@ -72,6 +73,13 @@ public class Account {
 
     public void daoHan() {
         daoHan = soTientrongTK + (soTientrongTK * hangSoLai);
+    }
+
+    @Override
+    public String toString() {
+        return "Account [STK=" + STK + ", hangsolai=" + hangsolai + ", soTientrongTK=" + donvitien.format(soTientrongTK)
+                + ", tenTK="
+                + tenTK + "]";
     }
 
 }

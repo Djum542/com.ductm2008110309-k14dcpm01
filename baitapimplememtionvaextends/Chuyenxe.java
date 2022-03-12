@@ -1,45 +1,73 @@
 import java.util.Scanner;
 
 public class Chuyenxe {
-    private double maChuyenxe;
-    private String tenTaiXe;
-    private double soXe;
-    private float doanhThu;
+    protected String Macx, Nametx, Sox;
+    protected double Doanhthu;
+    Scanner in = new Scanner(System.in);
 
-    protected void maChuyenxe() {
-        System.out.println("Mã chuyến xe là:");
+    protected void setMacx() {
+        Macx = Macx;
     }
 
-    protected void tenTaiXe() {
-        System.out.println("Tên tài xế là:");
+    protected String getMacx() {
+        return Macx;
     }
 
-    protected void soXe() {
-        System.out.println("Số chuyến xe trong ngày:");
+    protected void setNametx() {
+        Nametx = Nametx;
     }
 
-    protected void doanhThu() {
-        System.out.println("Doanh thu kiếm được:");
+    protected String getNametx() {
+        return Nametx;
     }
 
-    public void Nhap() {
-        System.out.println("Mã số chuyến");
-        this.maChuyenxe = input.nextDouble();
-        System.out.println("Tên tài xế");
-        this.tenTaiXe = input.nextInt();
-        System.out.println("Số chuyến");
-        this.soXe = input.nextDouble();
-        System.out.println("Doamh thu");
-        this.doanhThu = input.nextDouble();
+    protected void setSox() {
+        Sox = Sox;
     }
 
-    public void xuat() {
-        System.out.println("Mã số chuyến" + this.maChuyenxe);
-        System.out.println("Tên tài xế" + this.tenTaixe);
-        System.out.println("Số xe" + this.soXe);
+    protected String getSox() {
+        return Sox;
+    }
 
-        System.out.println("Doanh thu" + this.doanhThu);
+    protected void setDoanhthu() {
+        Doanhthu = Doanhthu;
 
+    }
+
+    protected double getDoanhthu() {
+        return Doanhthu;
+    }
+
+    protected Chuyenxe() {
+        this.Macx = "";
+        this.Nametx = "";
+        this.Sox = "";
+        this.Doanhthu = 0;
+    }
+
+    protected Chuyenxe(String Macx, String Nametx, String Sox, double Doanhthu) {
+        this.Macx = "";
+        this.Nametx = "";
+        this.Sox = "";
+        this.Doanhthu = 500;
+    }
+
+    protected void nhap() {
+        System.out.println("Nhập mã số chyến xe");
+        this.Macx = in.nextLine();
+        System.out.println("Nhập tên tài xế");
+        this.Nametx = in.nextLine();
+        System.out.println("Nhập số xe");
+        this.Sox = in.nextLine();
+        System.out.println("Nhập doanh thu");
+        this.Doanhthu = in.nextDouble();
+
+    }
+
+    @Override
+    public String toString() {
+        return "Chuyenxe [Doanhthu=" + Doanhthu + ", Macx=" + Macx + ", Nametx=" + Nametx + ", Sox=" + Sox + ", in="
+                + in + "]";
     }
 
 }

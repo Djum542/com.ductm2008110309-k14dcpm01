@@ -1,3 +1,7 @@
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+
 import baitapimplememtionvaextends.Date;
 
 public class HangThucPham {
@@ -41,7 +45,7 @@ public class HangThucPham {
             this.donGia = donGia;
         } else {
             System.out.println("Đơn giá");
-            this.donGia = "            ";
+            this.donGia = "000000000";
         }
 
     }
@@ -65,11 +69,15 @@ public class HangThucPham {
     }
 
     public void setHSD(Date hSD) {
-        if (HSD != null && HSD after (NSX)) {
-            this.HSD = HSD;
-        }else{
+        if (HSD != null) {
+
+            if (HSD.after(this.NSX)) {
+                this.HSD = HSD;
+            }
+
+        } else {
             System.out.println("Hạn sử dung không được để trống");
-            this.HSD = "sau ngày sản xuất là 10 ngày";
+            this.HSD = new Date();
         }
 
     }
@@ -78,10 +86,34 @@ public class HangThucPham {
         return HSD;
     }
 
+    @Override
     public String toString() {
-        String string = "Mã" + this.id + "Tên sản phẩm" + this.tenSP + "Đơn giá" + this.donGia + "ngày sản xuất" + NSX
-                + "Hạn sử dụng" + HSD;
-        return string;
+        // dd/mm/yyy 10/3/2022
+        SimpleDateFormat ngayVietNam = new SimpleDateFormat("dd/mm/yyyy");
+
+        Locale localeVN = new Locale("vi", "vn");
+        NumberFormat tienVietNam = NumberFormat.getCurrencyInstance(localeVN);
+        return "HangThucPham [HSD=" + ngayVietNam.format(HSD) + ", NSX=" + ngayVietNam.format(NSX) + ", donGia="
+                + tienVietNam.format(donGia) + ", id=" + id + ", tenSP=" + tenSP
+                + "]";
     }
 
+    public HangThucPham(String id, String tenSP, float donGia, Date nSX, Date hSD) {
+        this.id = id;
+        this.tenSP = tenSP;
+        this.donGia = donGia;
+        NSX = nSX;
+        HSD = hSD;
+    }
+
+    public boolean kiemTraNgayHetHan(Date HSD, Date NSX) {
+        boolean isHSD = false;
+        if (this.HSD.before(new Date())) {
+            isHSD = true;
+            System.out.println("Sản phẩm đã hết hạn");
+        } else {
+            System.out.println("Sản phẩm còn hạn");
+        }
+
+    }
 }
