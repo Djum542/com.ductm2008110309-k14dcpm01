@@ -4,7 +4,7 @@ import Sourcecodeextends.Chuyenxe;
 
 public class ListChuyenXe {
 
-    private ChuyenXe[] CX = new Chuyenxe[1000];
+    private Chuyenxe[] CX = new Chuyenxe[1000];
     private int CountCX;
     private double sum1 = 0, sum2 = 0;
 
@@ -22,13 +22,13 @@ public class ListChuyenXe {
 
         } else {
             if (temp == 1) {
-                CX[CountCX] = new NoiThanh();
+
                 NoiThanh noit = new NoiThanh();
 
                 noit.nhap();
-                sum1 += noit.getDoanhthu();
+                sum1 += noit.doanhThu();
             } else {
-                CX[CountCX] = new Ngoaithanh();
+
                 Ngoaithanh ngoait = new Ngoaithanh();
                 ngoait.nhap();
                 CX[CountCX] = ngoait;
