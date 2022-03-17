@@ -2,6 +2,13 @@ package Sourcecodeextends;
 
 public class Chuyenxengoaithanh extends Chuyenxe {
 
+    private String noiDen;
+    private int soNgayDiDuoc;
+    private String maChuyenxe;
+    private String tenTaiXe;
+    private String doanhThu;
+    private String soXe;
+
     @Override
     protected void maChuyenxe() {
         System.out.println("Mã chuyến xe là:");
@@ -26,11 +33,11 @@ public class Chuyenxengoaithanh extends Chuyenxe {
         System.out.println("");// ("Doanh thu trong một ngày là:....);
     }
 
-    public Chuyenxengoaithanh(String soChuyenXe, String soXe, String tenTaiXe, Double maChuyenXe, String noiDen,
-            String soNgayDiDuoc, double doanhThu) {
-        super(soChuyenXe, soXe, tenTaiXe, doanhThu);
+    public Chuyenxengoaithanh(int i, int j, String tenTaiXe, int k, String noiDen,
+            int l, double doanhThu) {
+        super();
         this.noiDen = noiDen;
-        this.soNgayDiDuoc = soNgayDiDuoc;
+        this.soNgayDiDuoc = l;
     }
 
     public void noiDen() {

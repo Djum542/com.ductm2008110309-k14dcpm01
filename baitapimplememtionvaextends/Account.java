@@ -1,6 +1,6 @@
-package baitapimplememtionvaextends;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Formatter;
 
 public class Account {
@@ -9,6 +9,13 @@ public class Account {
     private String tenTK;
     private double soTientrongTK;
     private float hangsolai;
+    private Object napTien;
+    private double soTienNapVao;
+    private double rutTien;
+    private int soTienRut;
+    private int phiRutTien;
+    private Object daoHan;
+    private NumberFormat donvitien;
 
     public void setSTK(long sTK) {
         STK = sTK;
@@ -52,11 +59,12 @@ public class Account {
         if (true) {
             this.STK = STK;
             this.tenTK = tenTK;
-            this.soTientrongTK = "50";
+            this.soTientrongTK = 50;
 
         } else {
             Account account = new Account();
         }
+        return false;
 
     }
 
@@ -72,7 +80,7 @@ public class Account {
     }
 
     public void daoHan() {
-        daoHan = soTientrongTK + (soTientrongTK * hangSoLai);
+        daoHan = soTientrongTK + (soTientrongTK * hangsolai);
     }
 
     @Override
@@ -80,6 +88,12 @@ public class Account {
         return "Account [STK=" + STK + ", hangsolai=" + hangsolai + ", soTientrongTK=" + donvitien.format(soTientrongTK)
                 + ", tenTK="
                 + tenTK + "]";
+    }
+
+    public void tenTK(String string) {
+    }
+
+    public void soTientrongTK(String string) {
     }
 
 }

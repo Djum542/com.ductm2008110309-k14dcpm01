@@ -1,9 +1,12 @@
-package baitapimplememtionvaextends;
 
 public class AccountTestDriver {
+    private static String getSTK;
+    private static String getTenTK;
+    private static String getSoTientrongTK;
+
     public static void main(String[] args) {
         Account account = new Account();
-        account.STK("152255");
+        account.setTenTK("152255");
         account.tenTK("TRAN NGUYEN DAT");
         account.soTientrongTK("3300000");
         System.out.println("Số tài khoản" + getSTK);

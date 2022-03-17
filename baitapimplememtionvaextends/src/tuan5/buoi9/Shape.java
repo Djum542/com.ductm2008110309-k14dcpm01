@@ -12,10 +12,10 @@ public abstract class Shape {
 
     public abstract void erase();
 
-    public abstract void moveTo(int x, int y){
+    public void moveTo(int x, int y) {
         erase();
         x = x;
-        y =y;
+        y = y;
         draw();
     }
 }

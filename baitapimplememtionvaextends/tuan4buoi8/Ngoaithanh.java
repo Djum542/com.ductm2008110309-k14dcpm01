@@ -5,4 +5,8 @@ public class Ngoaithanh {
     public void nhap() {
     }
 
+    public double doanhThu() {
+        return 0;
+    }
+
 }

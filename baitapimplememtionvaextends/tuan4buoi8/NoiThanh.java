@@ -3,8 +3,8 @@ package tuan4buoi8;
 import java.util.Scanner;
 
 public class NoiThanh extends ChuyenXe {
-    private double SoKM;
-    private String SoTuyen;
+    private static double SoKM;
+    private static String SoTuyen;
     Scanner in = new Scanner(System.in);
 
     public void setSoKM(double soKM) {
@@ -24,7 +24,7 @@ public class NoiThanh extends ChuyenXe {
     }
 
     public NoiThanh() {
-        super();
+        super(SoKM, SoTuyen, SoKM, 0);
         this.SoKM = 0;
         this.SoTuyen = "";
 

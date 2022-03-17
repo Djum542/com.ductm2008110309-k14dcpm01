@@ -7,6 +7,7 @@ public class ListChuyenXe {
     private Chuyenxe[] CX = new Chuyenxe[1000];
     private int CountCX;
     private double sum1 = 0, sum2 = 0;
+    private Chuyenxe Ngoaithanh;
 
     public void ListCX() {
         CountCX = 0;
@@ -31,20 +32,20 @@ public class ListChuyenXe {
 
                 Ngoaithanh ngoait = new Ngoaithanh();
                 ngoait.nhap();
-                CX[CountCX] = ngoait;
-                sum2 += ngoait.getDoanhthu();
+                CX[CountCX] = Ngoaithanh;
+                sum2 += ngoait.doanhThu();
             }
             CountCX++;
         }
     }
 
-    public voi xuat() {
-        for(int i=0; i<CountCX; i++){
-            System.out.println("------------\---------\---------");
+    public void xuat() {
+        for (int i = 0; i < CountCX; i++) {
+            System.out.println("------------------------------");
             System.out.println(CX[i].toString());
         }
         System.out.println("--------------Doanh Thu-----------");
-        System.out.println("|| Chuyến xe noi thành" + sum1 +"||");
+        System.out.println("|| Chuyến xe noi thành" + sum1 + "||");
         System.out.println("|| Chuến xe ngoại thành" + sum2 + "||");
         System.out.println("-----------------------------------------");
     }

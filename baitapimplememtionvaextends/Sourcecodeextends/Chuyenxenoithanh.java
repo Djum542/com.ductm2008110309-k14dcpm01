@@ -17,6 +17,7 @@ public class Chuyenxenoithanh extends Chuyenxe {
     }
 
     Package sourcecodeextends;
+    private int soKMDiDuoc;
 
     public void soKMDiDuoc() {
         System.out.println("Số kilomet đi được trong một ngày:");
@@ -27,9 +28,9 @@ public class Chuyenxenoithanh extends Chuyenxe {
         System.out.println("Doanh thu trong một ngày là:");
     }
 
-    public Chuyenxenoithanh(String maChuyenxe, String tenTaiXe, String soXe, String soKMDiDuoc, String doanhThu) {
-        super(maChuyenxe, tenTaiXe, soXe, soKMDiDuoc, doanhThu);
-        this.soKMDiDuoc = soKMDiDuoc;
+    public Chuyenxenoithanh(int i, String tenTaiXe, int j, int k, int l) {
+        super(i, tenTaiXe, j, k, l);
+        this.soKMDiDuoc = k;
     }
 
     @Override

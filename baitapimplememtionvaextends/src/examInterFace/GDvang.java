@@ -41,7 +41,7 @@ public class GDvang extends DSdaodich {
 
     @Override
     protected int getThanhTien() {
-        return this.thanhTien = this.Dongia * this.SoLuong;
+        return (int) (this.ThanhTien = this.Dongia * this.SoLuong);
     }
 
     @Override

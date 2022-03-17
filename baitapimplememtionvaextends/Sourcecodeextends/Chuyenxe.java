@@ -2,6 +2,15 @@ package Sourcecodeextends;
 
 public class Chuyenxe {
 
+    public Chuyenxe(int i, String tenTaiXe, int j, String soKMDiDuoc, int l) {
+    }
+
+    public Chuyenxe() {
+    }
+
+    public Chuyenxe(int i, String tenTaiXe, int j, int k, int l) {
+    }
+
     protected void maChuyenxe() {
         System.out.println("Mã chuyến xe là:");
     }

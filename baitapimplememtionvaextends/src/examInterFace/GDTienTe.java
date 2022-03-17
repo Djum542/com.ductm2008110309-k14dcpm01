@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class GDTienTe extends DSdaodich {
     private float TiGia;
     private int LoaiTienTe;
+    private Object DSdaodich;
 
     @Override
     protected void setDonGia() {
@@ -74,7 +75,7 @@ public class GDTienTe extends DSdaodich {
     }
 
     public GDTienTe(double magd, String ngaygd, double soLuong, double dongia, double thanhTien, Scanner in,
-            float tiGia, float loaiTienTe) {
+            float tiGia, int loaiTienTe) {
         super(magd, ngaygd, soLuong, dongia, thanhTien, in);
         this.TiGia = tiGia;
         this.LoaiTienTe = loaiTienTe;
@@ -106,7 +107,7 @@ public class GDTienTe extends DSdaodich {
     }
 
     public double ThanhTien() {
-        if (LoaiTienTe) {
+        if (LoaiTienTe == 1) {
             return this.ThanhTien = this.Dongia * this.SoLuong;
 
         } else {
@@ -118,6 +119,6 @@ public class GDTienTe extends DSdaodich {
 
     @Override
     public String toString() {
-        return "GDTienTe [LoaiTienTe=" + LoaiTienTe + ", TiGia=" + TiGia + "]" + toString(DSdaodich);
+        return "GDTienTe [LoaiTienTe=" + LoaiTienTe + ", TiGia=" + TiGia + "]" + toString();
     }
 }

@@ -44,12 +44,12 @@ public class KhachHangTrong extends KhachHang {
         DinhMuc = in.nextInt();
     }
 
-    public void thanhTien() {
+    public double thanhTien() {
         if (SoLuong <= DinhMuc) {
-            return this.thanhTien = this.DonGia * this.SoLuong;
+            return this.ThanhTien = this.DonGia * this.SoLuong;
 
         } else {
-            return this.thanhTien = this.DinhMuc * this.DonGia + (this.SoLuong - this.DinhMuc) * this.DonGia * 2.5;
+            return this.ThanhTien = this.DinhMuc * this.DonGia + (this.SoLuong - this.DinhMuc) * this.DonGia * 2.5;
 
         }
 

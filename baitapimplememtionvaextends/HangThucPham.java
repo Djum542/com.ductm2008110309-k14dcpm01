@@ -2,8 +2,6 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-import baitapimplememtionvaextends.Date;
-
 public class HangThucPham {
     private String id;
     private String tenSP;
@@ -11,7 +9,7 @@ public class HangThucPham {
     private Date NSX;
     private Date HSD;
 
-    private void setId(String id) {
+    void setId(String id) {
 
         if (id != null) {
             this.id = id;
@@ -45,7 +43,7 @@ public class HangThucPham {
             this.donGia = donGia;
         } else {
             System.out.println("Đơn giá");
-            this.donGia = "000000000";
+            this.donGia = 000000000;
         }
 
     }
@@ -114,6 +112,7 @@ public class HangThucPham {
         } else {
             System.out.println("Sản phẩm còn hạn");
         }
+        return isHSD;
 
     }
 }

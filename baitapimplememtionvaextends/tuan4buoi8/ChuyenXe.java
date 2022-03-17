@@ -22,7 +22,7 @@ public class ChuyenXe {
         return 0;
     }
 
-    public ChuyenXe(Double maSoChuyen, String tenTaiXe, double soXe, float doanhThu) {
+    public ChuyenXe(double soKM, String tenTaiXe, double soKM2, double dt) {
         this.maSoChuyen();
         this.tenTaiXe();
         this.soXe();
@@ -30,8 +30,14 @@ public class ChuyenXe {
 
     }
 
+    public ChuyenXe(String ma, String name, String sx, double dt) {
+    }
+
     @Override
     public String toString() {
         return "ChuyenXe []";
+    }
+
+    public void nhap() {
     }
 }
