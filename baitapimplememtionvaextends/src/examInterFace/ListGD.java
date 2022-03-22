@@ -1,4 +1,4 @@
-package src.examInterFace;
+package examInterFace;
 
 public abstract class ListGD {
     DSdaodich gd[] = new DSdaodich[100];

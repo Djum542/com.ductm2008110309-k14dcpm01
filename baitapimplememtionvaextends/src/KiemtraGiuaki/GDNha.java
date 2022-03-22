@@ -1,4 +1,4 @@
-package src.KiemtraGiuaki;
+package KiemtraGiuaki;
 
 import java.util.Scanner;
 

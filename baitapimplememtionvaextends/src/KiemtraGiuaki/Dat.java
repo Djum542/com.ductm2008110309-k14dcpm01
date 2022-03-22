@@ -1,4 +1,4 @@
-package src.KiemtraGiuaki;
+package KiemtraGiuaki;
 
 public interface Dat {
     void loaiDat();

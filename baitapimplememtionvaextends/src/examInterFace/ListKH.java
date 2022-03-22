@@ -1,4 +1,4 @@
-package src.examInterFace;
+package examInterFace;
 
 import java.rmi.dgc.VMID;
 
