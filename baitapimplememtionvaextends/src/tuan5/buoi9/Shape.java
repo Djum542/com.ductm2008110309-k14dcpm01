@@ -1,4 +1,4 @@
-package src.tuan5.buoi9;
+package tuan5.buoi9;
 
 public abstract class Shape {
     protected int x, y;

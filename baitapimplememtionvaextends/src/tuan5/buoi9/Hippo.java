@@ -1,4 +1,4 @@
-package src.tuan5.buoi9;
+package tuan5.buoi9;
 
 public class Hippo extends Animal implements Pet {
 
@@ -15,6 +15,18 @@ public class Hippo extends Animal implements Pet {
 
     @Override
     public void Play() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    protected void makeNoise() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    protected void eat() {
         // TODO Auto-generated method stub
 
     }

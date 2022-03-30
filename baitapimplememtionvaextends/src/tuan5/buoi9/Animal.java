@@ -1,3 +1,5 @@
+package tuan5.buoi9;
+
 import java.util.Random;
 
 import javax.swing.tree.RowMapper;

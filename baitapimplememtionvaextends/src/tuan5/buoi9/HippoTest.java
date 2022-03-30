@@ -1,8 +1,8 @@
-package src.tuan5.buoi9;
+package tuan5.buoi9;
 
 public class HippoTest {
     public static void main(String[] args) {
-        hippo Hippo = new hippo();
+        Hippo Hippo = new Hippo();
         System.out.println(Hippo);
     }
 }

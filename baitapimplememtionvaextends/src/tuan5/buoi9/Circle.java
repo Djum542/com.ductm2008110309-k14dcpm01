@@ -1,4 +1,4 @@
-package src.tuan5.buoi9;
+package tuan5.buoi9;
 
 public class Circle extends Shape {
     private int radius;
