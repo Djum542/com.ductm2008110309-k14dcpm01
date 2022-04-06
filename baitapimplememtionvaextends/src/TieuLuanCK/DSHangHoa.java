@@ -20,4 +20,41 @@ public class DSHangHoa {
 
     }
 
+    public void Them(HangHoa hangHoa) {
+
+        dHangHoa.add(hangHoa);
+    }
+
+    public void inDanhSach() {
+        for (HangHoa hangHoa : dHangHoa) {
+            System.out.println(hangHoa);
+        }
+    }
+
+    public HangHoa tiemkiemHangHoa(String MaHH) {
+
+        HangHoa hangHoa = null;
+        for (HangHoa hh : dHangHoa) {
+            if (hh.getMaHH().equalsIgnoreCase(MaHH)) {
+                hangHoa = (HangHoa) hh;
+            }
+        }
+        return hangHoa;
+
+    }
+
+    public void xoaGiaoDich(HangHoa hangHoa) {
+        this.dHangHoa.remove(hangHoa);
+    }
+
+    // tim vi tri cua Giao Dich torng danh sach
+    public int timViTriCuaGD(HangHoa hangHoa) {
+        int viTri = -1;
+        viTri = this.dHangHoa.indexOf(hangHoa);
+        return viTri;
+    }
+
+    public void suaGiaoDich(int viTri, HangHoa hangHoa) {
+        this.dHangHoa.set(viTri, hangHoa);
+    }
 }
