@@ -1,27 +1,45 @@
 package TieuLuanCK;
 
-import java.util.Date;
+import java.io.Serializable;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 
-public class ThucPham extends HangHoa implements HangThucPham {
-    public static void main(String[] args) {
+import org.omg.PortableServer.THREAD_POLICY_ID;
 
-    }
+public class ThucPham extends HangHoa implements HangThucPham, Serializable {
+    Date nsx, hsd;
 
     @Override
     public Void NSX() {
-        if (this.NSX().before(this.HSD())) {
-            this.NSX = new Date();
-            System.out.println("Còn hạn sử dụng");
+        if (nsx.before(this.hsd)) {
+            this.nsx = nsx;
         } else {
-            System.out.println("Het");
+            this.nsx = new Date(0);
         }
-        return null;
+        return NSX();
     }
 
     @Override
     public Void HSD() {
-        // TODO Auto-generated method stub
+        if (hsd.after(this.nsx)) {
+            this.hsd = hsd;
+        } else {
+            this.hsd = new Date(7);
+        }
         return null;
+    }
+
+    public ThucPham(String maHH, String tenHH, double soLuongTon, double donGia, Date nsx, Date hsd) {
+        super(maHH, tenHH, soLuongTon, donGia);
+        this.nsx = nsx;
+        this.hsd = hsd;
+    }
+
+    @Override
+    public String toString() {
+        SimpleDateFormat ngayVietNam = new SimpleDateFormat();
+        return "ThucPham [hsd=" + ngayVietNam.format(hsd) + ", nsx=" + ngayVietNam.format(nsx) + "]" + super.toString();
     }
 
 }
