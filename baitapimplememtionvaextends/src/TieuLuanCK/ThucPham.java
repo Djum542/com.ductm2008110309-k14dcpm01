@@ -5,10 +5,9 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
-import org.omg.PortableServer.THREAD_POLICY_ID;
-
 public class ThucPham extends HangHoa implements HangThucPham, Serializable {
-    Date nsx, hsd;
+    Date nsx;
+    Date hsd;
 
     @Override
     public Void NSX() {
@@ -30,10 +29,18 @@ public class ThucPham extends HangHoa implements HangThucPham, Serializable {
         return null;
     }
 
-    public ThucPham(String maHH, String tenHH, double soLuongTon, double donGia, Date nsx, Date hsd) {
+    public ThucPham(String maHH, String tenHH, double soLuongTon, double donGia, int nsx2, int hsd2) {
         super(maHH, tenHH, soLuongTon, donGia);
         this.nsx = nsx;
         this.hsd = hsd;
+    }
+
+    @Override
+    public void setSoLuongTon(double soLuongTon) {
+        if (getSoLuongTon() > 0 && nsx.after(this.hsd)) {
+            System.out.println("Khó bán quá giảm số lượng nhập đi");
+        }
+        super.setSoLuongTon(soLuongTon);
     }
 
     @Override

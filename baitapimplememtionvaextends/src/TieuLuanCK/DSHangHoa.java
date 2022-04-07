@@ -6,7 +6,7 @@ import java.util.List;
 public class DSHangHoa {
     List<HangHoa> dHangHoa = new ArrayList<>();
 
-    public DSHangHoa() {
+    public DSHangHoa(HangHoa hangHoa) {
         System.out.printf("TP01", "bot ngot", 2500, 17000, 27 / 05 / 2022, 16 / 06 / 2023);
         System.out.printf("TP02", "haohao", 1000, 3500, 15 / 05 / 2022, 23 / 12 / 2022);
         System.out.printf("TP03", "ngu coc", 5600, 54000, 26 / 05 / 2022, 23 / 12 / 20223);
