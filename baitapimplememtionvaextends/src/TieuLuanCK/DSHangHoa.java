@@ -20,6 +20,9 @@ public class DSHangHoa {
 
     }
 
+    public DSHangHoa() {
+    }
+
     public void Them(HangHoa hangHoa) {
 
         dHangHoa.add(hangHoa);
@@ -56,5 +59,11 @@ public class DSHangHoa {
 
     public void suaGiaoDich(int viTri, HangHoa hangHoa) {
         this.dHangHoa.set(viTri, hangHoa);
+    }
+
+    public void suaGiaoDich(String hanghoa) {
+    }
+
+    public void viTri(boolean b) {
     }
 }
