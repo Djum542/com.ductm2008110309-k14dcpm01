@@ -1,17 +1,30 @@
 package TieuLuanCK;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class HangHoaClient {
+import javax.swing.JFrame;
+import javax.xml.crypto.Data;
+
+public class HangHoaClient extends JFrame {
     private static final String HangHoa = null;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileOutputStream outFile = new FileOutputStream(HangHoa);
+        ObjectOutputStream objOut = new ObjectOutputStream(outFile);
+
         Scanner in = new Scanner(System.in);
-        List dHangHoa = new ArrayList<HangHoa>();
-        while (dHangHoa != null) {
+        DSHangHoa dHoa = new DSHangHoa();
+        System.out.println(HangHoa);
+        objOut.close();
+        while (dHoa != null) {
             System.out.println("Nhập vào mã hàng hóa:");
             String maHH = in.nextLine();
             System.out.println("Nhập tên hàng hóa:");
@@ -38,6 +51,8 @@ public class HangHoaClient {
 
             }
         }
+        int x = in.nextInt();
+
         do {
             System.out.println("----------MENU----------------");
             System.out.println("\n|1.Them hang hoa|");
@@ -47,28 +62,43 @@ public class HangHoaClient {
             System.out.println("\n|5. Sua thong tin hang hoa|");
 
             System.out.println("\n|0. Ket thuc chuong trinh|");
-            int x = in.nextInt();
+
             switch (x) {
                 case 1:
 
-                    dHangHoa.Them(HangHoa);
+                    dHoa.Them(null);
+
                     break;
                 case 2:
-                    dHangHoa.inDanhSach(dHangHoa);
+                    dHoa.inDanhSach();
                     break;
                 case 3:
-                    dHangHoa.xoaGiaoDich(HangHoa);
+                    dHoa.xoaGiaoDich(null);
                     break;
                 case 4:
-                    dHangHoa.viTri(HangHoa);
+                    dHoa.viTri(true);
                     break;
                 case 5:
-                    dHangHoa.suaGiaoDich(HangHoa);
+                    dHoa.suaGiaoDich(HangHoa);
                     break;
 
                 default:
                     break;
             }
-        } while (dHangHoa != null);
+        } while (x != 0);
+        FileInputStream inFile = new FileInputStream("HangHoa");
+        ObjectInputStream objIn = new ObjectInputStream(inFile);
+        System.out.println(dHoa);
+        objIn.close();
+        HangHoaClient myWindow = new HangHoaClient();
+        myWindow.setSize(400, 540);
+        myWindow.setLocationRelativeTo(null);
+        myWindow.setVisible(true);
     }
+
+    public HangHoaClient() {
+        super();
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
 }
