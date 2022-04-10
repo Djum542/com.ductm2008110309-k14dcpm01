@@ -66,4 +66,7 @@ public class DSHangHoa {
 
     public void viTri(boolean b) {
     }
+
+    public void add(String string, String string2, int i, int j, int k, int l) {
+    }
 }

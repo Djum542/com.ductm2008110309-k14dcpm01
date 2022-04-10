@@ -18,7 +18,7 @@ public class HangHoaClient extends JFrame {
         {
             FileOutputStream outFile = new FileOutputStream("data.HangHoa");
             ObjectOutputStream objOut = new ObjectOutputStream(outFile);
-            System.out.println();
+            System.out.println(HangHoa);
             objOut.close();
         } finally {
             FileOutputStream outFile = new FileOutputStream("data.HangHoa");
@@ -29,7 +29,6 @@ public class HangHoaClient extends JFrame {
         }
         Scanner in = new Scanner(System.in);
         DSHangHoa dHoa = new DSHangHoa();
-
         while (dHoa != null) {
             try {
                 System.out.println("Nhập vào mã hàng hóa:");
